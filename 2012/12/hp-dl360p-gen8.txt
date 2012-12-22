@@ -1,0 +1,1069 @@
+hp_dl360p_gen8
+    description: Rack Mount Chassis
+    product: ProLiant DL360p Gen8 (B6T66A)
+    vendor: HP
+    serial: CN72300BJJ
+    width: 64 bits
+    capabilities: smbios-2.7 dmi-2.7 vsyscall64 vsyscall32
+    configuration: boot=hardware-failure-fw chassis=rackmount family=ProLiant sku=B6T66A uuid=42365436-3641-434E-3732-333030424A4A
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-firmware
+          description: BIOS
+          vendor: HP
+          physical id: 0
+          version: P71
+          date: 07/15/2012
+          size: 64KiB
+          capacity: 8128KiB
+          capabilities: pci pnp upgrade shadowing escd cdboot bootselect edd int13floppy360 int13floppy1200 int13floppy720 int5printscreen int9keyboard int14serial int17printer int10video acpi usb biosbootspecification netboot
+     *-cpu:0
+          description: CPU
+          product: Intel(R) Xeon(R) CPU E5-2630 0 @ 2.30GHz
+          vendor: Intel Corp.
+          physical id: 400
+          bus info: cpu@0
+          version: Intel(R) Xeon(R) CPU E5-2630 0 @ 2.30GHz
+          slot: Proc 1
+          size: 1200MHz
+          capacity: 1200MHz
+          width: 64 bits
+          clock: 100MHz
+          capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 x2apic popcnt aes xsave avx lahf_lm ida arat epb xsaveopt pln pts tpr_shadow vnmi flexpriority ept vpid cpufreq
+          configuration: cores=6 enabledcores=6 threads=12
+        *-cache:0
+             description: L1 cache
+             physical id: 710
+             slot: Processor 1 Internal L1 Cache
+             size: 192KiB
+             capacity: 256KiB
+             capabilities: burst internal write-back data
+        *-cache:1
+             description: L2 cache
+             physical id: 720
+             slot: Processor 1 Internal L2 Cache
+             size: 1536KiB
+             capacity: 2MiB
+             capabilities: burst internal write-back
+        *-cache:2
+             description: L3 cache
+             physical id: 730
+             slot: Processor 1 Internal L3 Cache
+             size: 15MiB
+             capacity: 20MiB
+             capabilities: burst internal write-back
+     *-cpu:1
+          description: CPU
+          product: Intel(R) Xeon(R) CPU E5-2630 0 @ 2.30GHz
+          vendor: Intel Corp.
+          physical id: 401
+          bus info: cpu@1
+          version: Intel(R) Xeon(R) CPU E5-2630 0 @ 2.30GHz
+          slot: Proc 2
+          size: 1200MHz
+          capacity: 1200MHz
+          width: 64 bits
+          clock: 100MHz
+          capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 x2apic popcnt aes xsave avx lahf_lm ida arat epb xsaveopt pln pts tpr_shadow vnmi flexpriority ept vpid cpufreq
+          configuration: cores=6 enabledcores=6 threads=12
+        *-cache:0
+             description: L1 cache
+             physical id: 716
+             slot: Processor 2 Internal L1 Cache
+             size: 192KiB
+             capacity: 256KiB
+             capabilities: burst internal write-back data
+        *-cache:1
+             description: L2 cache
+             physical id: 726
+             slot: Processor 2 Internal L2 Cache
+             size: 1536KiB
+             capacity: 2MiB
+             capabilities: burst internal write-back
+        *-cache:2
+             description: L3 cache
+             physical id: 736
+             slot: Processor 2 Internal L3 Cache
+             size: 15MiB
+             capacity: 20MiB
+             capabilities: burst internal write-back
+     *-memory:0
+          description: System Memory
+          physical id: 1000
+          slot: System board or motherboard
+        *-bank:0
+             description: DIMM DDR3 Synchronous 1333 MHz (0.8 ns)
+             vendor: HP
+             physical id: 0
+             slot: PROC  1 DIMM  1
+             size: 8GiB
+             width: 64 bits
+             clock: 1333MHz (0.8ns)
+        *-bank:1
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 1
+             slot: PROC  1 DIMM  2
+             width: 64 bits
+        *-bank:2
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 2
+             slot: PROC  1 DIMM  3
+             width: 64 bits
+        *-bank:3
+             description: DIMM DDR3 Synchronous 1333 MHz (0.8 ns)
+             vendor: HP
+             physical id: 3
+             slot: PROC  1 DIMM  4
+             size: 8GiB
+             width: 64 bits
+             clock: 1333MHz (0.8ns)
+        *-bank:4
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 4
+             slot: PROC  1 DIMM  5
+             width: 64 bits
+        *-bank:5
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 5
+             slot: PROC  1 DIMM  6
+             width: 64 bits
+        *-bank:6
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 6
+             slot: PROC  1 DIMM  7
+             width: 64 bits
+        *-bank:7
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 7
+             slot: PROC  1 DIMM  8
+             width: 64 bits
+        *-bank:8
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 8
+             slot: PROC  1 DIMM  9
+             width: 64 bits
+        *-bank:9
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 9
+             slot: PROC  1 DIMM 10
+             width: 64 bits
+        *-bank:10
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: a
+             slot: PROC  1 DIMM 11
+             width: 64 bits
+        *-bank:11
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: b
+             slot: PROC  1 DIMM 12
+             width: 64 bits
+     *-memory:1
+          description: System Memory
+          physical id: 1001
+          slot: System board or motherboard
+        *-bank:0
+             description: DIMM DDR3 Synchronous 1333 MHz (0.8 ns)
+             vendor: HP
+             physical id: 0
+             slot: PROC  2 DIMM  1
+             size: 8GiB
+             width: 64 bits
+             clock: 1333MHz (0.8ns)
+        *-bank:1
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 1
+             slot: PROC  2 DIMM  2
+             width: 64 bits
+        *-bank:2
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 2
+             slot: PROC  2 DIMM  3
+             width: 64 bits
+        *-bank:3
+             description: DIMM DDR3 Synchronous 1333 MHz (0.8 ns)
+             vendor: HP
+             physical id: 3
+             slot: PROC  2 DIMM  4
+             size: 8GiB
+             width: 64 bits
+             clock: 1333MHz (0.8ns)
+        *-bank:4
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 4
+             slot: PROC  2 DIMM  5
+             width: 64 bits
+        *-bank:5
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 5
+             slot: PROC  2 DIMM  6
+             width: 64 bits
+        *-bank:6
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 6
+             slot: PROC  2 DIMM  7
+             width: 64 bits
+        *-bank:7
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 7
+             slot: PROC  2 DIMM  8
+             width: 64 bits
+        *-bank:8
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 8
+             slot: PROC  2 DIMM  9
+             width: 64 bits
+        *-bank:9
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: 9
+             slot: PROC  2 DIMM 10
+             width: 64 bits
+        *-bank:10
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: a
+             slot: PROC  2 DIMM 11
+             width: 64 bits
+        *-bank:11
+             description: DIMM DDR3 Synchronous [empty]
+             vendor: UNKNOWN
+             physical id: b
+             slot: PROC  2 DIMM 12
+             width: 64 bits
+     *-memory:2 UNCLAIMED
+          physical id: 6
+     *-memory:3 UNCLAIMED
+          physical id: 7
+     *-pci:0
+          description: Host bridge
+          product: Xeon E5/Core i7 DMI2 [8086:3C00]
+          vendor: Intel Corporation [8086]
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+        *-pci:0
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 1a [8086:3C02]
+             vendor: Intel Corporation [8086]
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+        *-pci:1
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 1b [8086:3C03]
+             vendor: Intel Corporation [8086]
+             physical id: 1.1
+             bus info: pci@0000:00:01.1
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+        *-pci:2
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 2a [8086:3C04]
+             vendor: Intel Corporation [8086]
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+             resources: memory:f4000000-f40fffff ioport:f6b00000(size=1048576)
+           *-network:0
+                description: Ethernet interface
+                product: NetXtreme BCM5719 Gigabit Ethernet PCIe [14E4:1657]
+                vendor: Broadcom Corporation [14E4]
+                physical id: 0
+                bus info: pci@0000:03:00.0
+                logical name: eth0
+                version: 01
+                serial: ac:16:2d:6f:c8:cc
+                size: 1Gbit/s
+                capacity: 1Gbit/s
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm vpd msi msix pciexpress bus_master cap_list rom ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 duplex=full firmware=5719-v1.29 NCSI v1.0.80.0 ip=10.20.216.130 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
+                resources: irq:32 memory:f6bf0000-f6bfffff(prefetchable) memory:f6be0000-f6beffff(prefetchable) memory:f6bd0000-f6bdffff(prefetchable) memory:f6b00000-f6b1ffff(prefetchable)
+           *-network:1 DISABLED
+                description: Ethernet interface
+                product: NetXtreme BCM5719 Gigabit Ethernet PCIe [14E4:1657]
+                vendor: Broadcom Corporation [14E4]
+                physical id: 0.1
+                bus info: pci@0000:03:00.1
+                logical name: eth1
+                version: 01
+                serial: ac:16:2d:6f:c8:cd
+                capacity: 1Gbit/s
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm vpd msi msix pciexpress bus_master cap_list rom ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 firmware=5719-v1.29 NCSI v1.0.80.0 latency=0 link=no multicast=yes port=twisted pair
+                resources: irq:36 memory:f6bc0000-f6bcffff(prefetchable) memory:f6bb0000-f6bbffff(prefetchable) memory:f6ba0000-f6baffff(prefetchable) memory:f6b20000-f6b3ffff(prefetchable)
+           *-network:2 DISABLED
+                description: Ethernet interface
+                product: NetXtreme BCM5719 Gigabit Ethernet PCIe [14E4:1657]
+                vendor: Broadcom Corporation [14E4]
+                physical id: 0.2
+                bus info: pci@0000:03:00.2
+                logical name: eth2
+                version: 01
+                serial: ac:16:2d:6f:c8:ce
+                capacity: 1Gbit/s
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm vpd msi msix pciexpress bus_master cap_list rom ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 firmware=5719-v1.29 NCSI v1.0.80.0 latency=0 link=no multicast=yes port=twisted pair
+                resources: irq:32 memory:f6b90000-f6b9ffff(prefetchable) memory:f6b80000-f6b8ffff(prefetchable) memory:f6b70000-f6b7ffff(prefetchable) memory:f4000000-f401ffff(prefetchable)
+           *-network:3 DISABLED
+                description: Ethernet interface
+                product: NetXtreme BCM5719 Gigabit Ethernet PCIe [14E4:1657]
+                vendor: Broadcom Corporation [14E4]
+                physical id: 0.3
+                bus info: pci@0000:03:00.3
+                logical name: eth3
+                version: 01
+                serial: ac:16:2d:6f:c8:cf
+                capacity: 1Gbit/s
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm vpd msi msix pciexpress bus_master cap_list rom ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 firmware=5719-v1.29 NCSI v1.0.80.0 latency=0 link=no multicast=yes port=twisted pair
+                resources: irq:36 memory:f6b60000-f6b6ffff(prefetchable) memory:f6b50000-f6b5ffff(prefetchable) memory:f6b40000-f6b4ffff(prefetchable) memory:f4020000-f403ffff(prefetchable)
+        *-pci:3
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 2b [8086:3C05]
+             vendor: Intel Corporation [8086]
+             physical id: 2.1
+             bus info: pci@0000:00:02.1
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+        *-pci:4
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 2c [8086:3C06]
+             vendor: Intel Corporation [8086]
+             physical id: 2.2
+             bus info: pci@0000:00:02.2
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+             resources: ioport:5000(size=4096) memory:f7e00000-f7ffffff memory:f4100000-f41fffff(prefetchable)
+           *-storage
+                description: RAID bus controller
+                product: Smart Array Gen8 Controllers [103C:323B]
+                vendor: Hewlett-Packard Company [103C]
+                physical id: 0
+                bus info: pci@0000:02:00.0
+                logical name: scsi2
+                version: 01
+                width: 64 bits
+                clock: 33MHz
+                capabilities: storage pm msi msix pciexpress bus_master cap_list rom
+                configuration: driver=hpsa latency=0
+                resources: irq:34 memory:f7f00000-f7ffffff memory:f7ef0000-f7ef03ff ioport:5000(size=256) memory:f4100000-f417ffff(prefetchable)
+              *-generic UNCLAIMED
+                   description: SCSI
+                   product: P420i
+                   vendor: HP
+                   physical id: 3.0.0
+                   bus info: scsi@2:3.0.0
+                   version: 3.04
+                   serial: 5001438020D2D160
+                   configuration: ansiversion=5
+              *-disk
+                   description: SCSI Disk
+                   product: LOGICAL VOLUME
+                   vendor: HP
+                   physical id: 0.0.0
+                   bus info: scsi@2:0.0.0
+                   logical name: /dev/sda
+                   version: 3.04
+                   serial: 5001438020D2D160
+                   size: 279GiB (299GB)
+                   capabilities: 15000rpm partitioned partitioned:dos
+                   configuration: ansiversion=5 sectorsize=512 signature=000ebe22
+                 *-volume:0
+                      description: EXT4 volume
+                      vendor: Linux
+                      physical id: 1
+                      bus info: scsi@2:0.0.0,1
+                      logical name: /dev/sda1
+                      logical name: /
+                      version: 1.0
+                      serial: 5a741c8a-58a7-4a29-9786-88407aa2c6ae
+                      size: 48GiB
+                      capacity: 48GiB
+                      capabilities: primary bootable journaled extended_attributes large_files huge_files dir_nlink extents ext4 ext2 initialized
+                      configuration: created=2012-12-22 10:23:38 filesystem=ext4 lastmountpoint=/ modified=2012-12-22 10:29:37 mount.fstype=ext4 mount.options=rw,relatime,barrier=1,stripe=64,data=ordered mounted=2012-12-22 10:32:29 state=mounted
+                 *-volume:1
+                      description: Linux swap volume
+                      physical id: 2
+                      bus info: scsi@2:0.0.0,2
+                      logical name: /dev/sda2
+                      version: 1
+                      serial: 5d8c6dfe-63bd-4f1e-9ac7-32f93025b9df
+                      size: 14GiB
+                      capacity: 14GiB
+                      capabilities: primary nofs swap initialized
+                      configuration: filesystem=swap pagesize=4096
+                 *-volume:2
+                      description: EXT4 volume
+                      vendor: Linux
+                      physical id: 3
+                      bus info: scsi@2:0.0.0,3
+                      logical name: /dev/sda3
+                      logical name: /data
+                      version: 1.0
+                      serial: 8ac28c9e-f62f-4863-bc4c-7ac31547150e
+                      size: 215GiB
+                      capacity: 215GiB
+                      capabilities: primary journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
+                      configuration: created=2012-12-22 10:23:46 filesystem=ext4 lastmountpoint=/data modified=2012-12-22 13:38:24 mount.fstype=ext4 mount.options=rw,relatime,barrier=1,stripe=64,data=ordered mounted=2012-12-22 13:38:24 state=mounted
+        *-pci:5
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 2d [8086:3C07]
+             vendor: Intel Corporation [8086]
+             physical id: 2.3
+             bus info: pci@0000:00:02.3
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+        *-pci:6
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 3a in PCI Express Mode [8086:3C08]
+             vendor: Intel Corporation [8086]
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+        *-pci:7
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 3b [8086:3C09]
+             vendor: Intel Corporation [8086]
+             physical id: 3.1
+             bus info: pci@0000:00:03.1
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+        *-pci:8
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 3c [8086:3C0A]
+             vendor: Intel Corporation [8086]
+             physical id: 3.2
+             bus info: pci@0000:00:03.2
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+        *-pci:9
+             description: PCI bridge
+             product: Xeon E5/Core i7 IIO PCI Express Root Port 3d [8086:3C0B]
+             vendor: Intel Corporation [8086]
+             physical id: 3.3
+             bus info: pci@0000:00:03.3
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+        *-generic:0
+             description: System peripheral
+             product: Xeon E5/Core i7 DMA Channel 0 [8086:3C20]
+             vendor: Intel Corporation [8086]
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix pciexpress pm bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: irq:5 memory:f6cf0000-f6cf3fff
+        *-generic:1
+             description: System peripheral
+             product: Xeon E5/Core i7 DMA Channel 1 [8086:3C21]
+             vendor: Intel Corporation [8086]
+             physical id: 4.1
+             bus info: pci@0000:00:04.1
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix pciexpress pm bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: irq:7 memory:f6ce0000-f6ce3fff
+        *-generic:2
+             description: System peripheral
+             product: Xeon E5/Core i7 DMA Channel 2 [8086:3C22]
+             vendor: Intel Corporation [8086]
+             physical id: 4.2
+             bus info: pci@0000:00:04.2
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix pciexpress pm bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: irq:10 memory:f6cd0000-f6cd3fff
+        *-generic:3
+             description: System peripheral
+             product: Xeon E5/Core i7 DMA Channel 3 [8086:3C23]
+             vendor: Intel Corporation [8086]
+             physical id: 4.3
+             bus info: pci@0000:00:04.3
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix pciexpress pm bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: irq:10 memory:f6cc0000-f6cc3fff
+        *-generic:4
+             description: System peripheral
+             product: Xeon E5/Core i7 DMA Channel 4 [8086:3C24]
+             vendor: Intel Corporation [8086]
+             physical id: 4.4
+             bus info: pci@0000:00:04.4
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix pciexpress pm bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: irq:5 memory:f6cb0000-f6cb3fff
+        *-generic:5
+             description: System peripheral
+             product: Xeon E5/Core i7 DMA Channel 5 [8086:3C25]
+             vendor: Intel Corporation [8086]
+             physical id: 4.5
+             bus info: pci@0000:00:04.5
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix pciexpress pm bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: irq:7 memory:f6ca0000-f6ca3fff
+        *-generic:6
+             description: System peripheral
+             product: Xeon E5/Core i7 DMA Channel 6 [8086:3C26]
+             vendor: Intel Corporation [8086]
+             physical id: 4.6
+             bus info: pci@0000:00:04.6
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix pciexpress pm bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: irq:10 memory:f6c90000-f6c93fff
+        *-generic:7
+             description: System peripheral
+             product: Xeon E5/Core i7 DMA Channel 7 [8086:3C27]
+             vendor: Intel Corporation [8086]
+             physical id: 4.7
+             bus info: pci@0000:00:04.7
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix pciexpress pm bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: irq:10 memory:f6c80000-f6c83fff
+        *-generic:8 UNCLAIMED
+             description: System peripheral
+             product: Xeon E5/Core i7 Address Map, VTd_Misc, System Management [8086:3C28]
+             vendor: Intel Corporation [8086]
+             physical id: 5
+             bus info: pci@0000:00:05.0
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pciexpress cap_list
+             configuration: latency=0
+        *-generic:9 UNCLAIMED
+             description: System peripheral
+             product: Xeon E5/Core i7 Control Status and Global Errors [8086:3C2A]
+             vendor: Intel Corporation [8086]
+             physical id: 5.2
+             bus info: pci@0000:00:05.2
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pciexpress cap_list
+             configuration: latency=0
+        *-generic:10 UNCLAIMED
+             description: PIC
+             product: Xeon E5/Core i7 I/O APIC [8086:3C2C]
+             vendor: Intel Corporation [8086]
+             physical id: 5.4
+             bus info: pci@0000:00:05.4
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm io_x_-apic bus_master cap_list
+             configuration: latency=0
+             resources: memory:f6c70000-f6c70fff
+        *-pci:10
+             description: PCI bridge
+             product: C600/X79 series chipset PCI Express Virtual Root Port [8086:1D3E]
+             vendor: Intel Corporation [8086]
+             physical id: 11
+             bus info: pci@0000:00:11.0
+             version: 05
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress pm msi normal_decode bus_master cap_list
+        *-usb:0
+             description: USB controller
+             product: C600/X79 series chipset USB2 Enhanced Host Controller #2 [8086:1D2D]
+             vendor: Intel Corporation [8086]
+             physical id: 1a
+             bus info: pci@0000:00:1a.0
+             version: 05
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm debug ehci bus_master cap_list
+             configuration: driver=ehci_hcd latency=0
+             resources: irq:21 memory:f6c60000-f6c603ff
+           *-usbhost
+                product: EHCI Host Controller [1D6B:2]
+                vendor: Linux 2.6.32-279.19.1.el6.x86_64 ehci_hcd [1D6B]
+                physical id: 1
+                bus info: usb@1
+                logical name: usb1
+                version: 2.06
+                capabilities: usb-2.00
+                configuration: driver=hub slots=2 speed=480Mbit/s
+              *-usb
+                   description: USB hub
+                   product: Integrated Rate Matching Hub [8087:24]
+                   vendor: Intel Corp. [8087]
+                   physical id: 1
+                   bus info: usb@1:1
+                   version: 0.00
+                   capabilities: usb-2.00
+                   configuration: driver=hub slots=6 speed=480Mbit/s
+        *-pci:11
+             description: PCI bridge
+             product: C600/X79 series chipset PCI Express Root Port 1 [8086:1D10]
+             vendor: Intel Corporation [8086]
+             physical id: 1c
+             bus info: pci@0000:00:1c.0
+             version: b5
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+        *-pci:12
+             description: PCI bridge
+             product: C600/X79 series chipset PCI Express Root Port 8 [8086:1D1E]
+             vendor: Intel Corporation [8086]
+             physical id: 1c.7
+             bus info: pci@0000:00:1c.7
+             version: b5
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             resources: ioport:3000(size=4096) memory:f6d00000-f7dfffff ioport:f5000000(size=16777216)
+           *-generic:0
+                description: System peripheral
+                product: Integrated Lights-Out Standard Slave Instrumentation & System Support [103C:3306]
+                vendor: Hewlett-Packard Company [103C]
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                version: 05
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list
+                configuration: driver=hpwdt latency=0
+                resources: irq:19 ioport:3000(size=256) memory:f7df0000-f7df01ff ioport:3400(size=256)
+           *-display UNCLAIMED
+                description: VGA compatible controller
+                product: MGA G200EH [102B:533]
+                vendor: Matrox Electronics Systems Ltd. [102B]
+                physical id: 0.1
+                bus info: pci@0000:01:00.1
+                version: 00
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress vga_controller bus_master cap_list
+                configuration: latency=0
+                resources: memory:f5000000-f5ffffff(prefetchable) memory:f7de0000-f7de3fff memory:f7000000-f77fffff
+           *-generic:1
+                description: System peripheral
+                product: Integrated Lights-Out Standard Management Processor Support and Messaging [103C:3307]
+                vendor: Hewlett-Packard Company [103C]
+                physical id: 0.2
+                bus info: pci@0000:01:00.2
+                version: 05
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list rom
+                configuration: driver=hpilo latency=0
+                resources: irq:16 ioport:3800(size=256) memory:f6ff0000-f6ff00ff memory:f6e00000-f6efffff memory:f6d80000-f6dfffff memory:f6d70000-f6d77fff memory:f6d60000-f6d67fff memory:f6d00000-f6d0ffff(prefetchable)
+           *-usb
+                description: USB controller
+                product: Integrated Lights-Out Standard Virtual USB Controller [103C:3300]
+                vendor: Hewlett-Packard Company [103C]
+                physical id: 0.4
+                bus info: pci@0000:01:00.4
+                version: 02
+                width: 32 bits
+                clock: 33MHz
+                capabilities: msi pciexpress pm uhci bus_master cap_list
+                configuration: driver=uhci_hcd latency=0
+                resources: irq:16 ioport:3c00(size=32)
+              *-usbhost
+                   product: UHCI Host Controller [1D6B:1]
+                   vendor: Linux 2.6.32-279.19.1.el6.x86_64 uhci_hcd [1D6B]
+                   physical id: 1
+                   bus info: usb@3
+                   logical name: usb3
+                   version: 2.06
+                   capabilities: usb-1.10
+                   configuration: driver=hub slots=2 speed=12Mbit/s
+        *-usb:1
+             description: USB controller
+             product: C600/X79 series chipset USB2 Enhanced Host Controller #1 [8086:1D26]
+             vendor: Intel Corporation [8086]
+             physical id: 1d
+             bus info: pci@0000:00:1d.0
+             version: 05
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm debug ehci bus_master cap_list
+             configuration: driver=ehci_hcd latency=0
+             resources: irq:20 memory:f6c50000-f6c503ff
+           *-usbhost
+                product: EHCI Host Controller [1D6B:2]
+                vendor: Linux 2.6.32-279.19.1.el6.x86_64 ehci_hcd [1D6B]
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 2.06
+                capabilities: usb-2.00
+                configuration: driver=hub slots=2 speed=480Mbit/s
+              *-usb
+                   description: USB hub
+                   product: Integrated Rate Matching Hub [8087:24]
+                   vendor: Intel Corp. [8087]
+                   physical id: 1
+                   bus info: usb@2:1
+                   version: 0.00
+                   capabilities: usb-2.00
+                   configuration: driver=hub slots=8 speed=480Mbit/s
+                 *-usb
+                      description: USB hub
+                      vendor: Standard Microsystems Corp. [424]
+                      physical id: 3
+                      bus info: usb@2:1.3
+                      version: 8.01
+                      capabilities: usb-2.00
+                      configuration: driver=hub maxpower=2mA slots=2 speed=480Mbit/s
+        *-pci:13
+             description: PCI bridge
+             product: 82801 PCI Bridge [8086:244E]
+             vendor: Intel Corporation [8086]
+             physical id: 1e
+             bus info: pci@0000:00:1e.0
+             version: a5
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci subtractive_decode bus_master cap_list
+        *-isa
+             description: ISA bridge
+             product: C600/X79 series chipset LPC Controller [8086:1D41]
+             vendor: Intel Corporation [8086]
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 05
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master cap_list
+             configuration: latency=0
+        *-ide
+             description: IDE interface
+             product: C600/X79 series chipset 4-Port SATA IDE Controller [8086:1D00]
+             vendor: Intel Corporation [8086]
+             physical id: 1f.2
+             bus info: pci@0000:00:1f.2
+             version: 05
+             width: 32 bits
+             clock: 66MHz
+             capabilities: ide pm bus_master cap_list
+             configuration: driver=ata_piix latency=0
+             resources: irq:17 ioport:4000(size=8) ioport:4008(size=4) ioport:4010(size=8) ioport:4018(size=4) ioport:4020(size=16) ioport:4030(size=16)
+     *-pci:1
+          description: PCI bridge
+          product: Xeon E5/Core i7 DMI2 in PCI Express Mode [8086:3C01]
+          vendor: Intel Corporation [8086]
+          physical id: 101
+          bus info: pci@0000:20:00.0
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+          resources: iomemory:fff00-ffeff
+     *-pci:2
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 1a [8086:3C02]
+          vendor: Intel Corporation [8086]
+          physical id: 1
+          bus info: pci@0000:20:01.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-pci:3
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 1b [8086:3C03]
+          vendor: Intel Corporation [8086]
+          physical id: 1.1
+          bus info: pci@0000:20:01.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-pci:4
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 2a [8086:3C04]
+          vendor: Intel Corporation [8086]
+          physical id: 2
+          bus info: pci@0000:20:02.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-pci:5
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 2b [8086:3C05]
+          vendor: Intel Corporation [8086]
+          physical id: 2.1
+          bus info: pci@0000:20:02.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-pci:6
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 2c [8086:3C06]
+          vendor: Intel Corporation [8086]
+          physical id: 2.2
+          bus info: pci@0000:20:02.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-pci:7
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 2d [8086:3C07]
+          vendor: Intel Corporation [8086]
+          physical id: 2.3
+          bus info: pci@0000:20:02.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-pci:8
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 3a in PCI Express Mode [8086:3C08]
+          vendor: Intel Corporation [8086]
+          physical id: 3
+          bus info: pci@0000:20:03.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-pci:9
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 3b [8086:3C09]
+          vendor: Intel Corporation [8086]
+          physical id: 3.1
+          bus info: pci@0000:20:03.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-pci:10
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 3c [8086:3C0A]
+          vendor: Intel Corporation [8086]
+          physical id: 3.2
+          bus info: pci@0000:20:03.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-pci:11
+          description: PCI bridge
+          product: Xeon E5/Core i7 IIO PCI Express Root Port 3d [8086:3C0B]
+          vendor: Intel Corporation [8086]
+          physical id: 3.3
+          bus info: pci@0000:20:03.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci msi pciexpress pm normal_decode bus_master cap_list
+     *-generic:0
+          description: System peripheral
+          product: Xeon E5/Core i7 DMA Channel 0 [8086:3C20]
+          vendor: Intel Corporation [8086]
+          physical id: 4
+          bus info: pci@0000:20:04.0
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: msix pciexpress pm bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: irq:5 memory:fbff0000-fbff3fff
+     *-generic:1
+          description: System peripheral
+          product: Xeon E5/Core i7 DMA Channel 1 [8086:3C21]
+          vendor: Intel Corporation [8086]
+          physical id: 4.1
+          bus info: pci@0000:20:04.1
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: msix pciexpress pm bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: irq:7 memory:fbfe0000-fbfe3fff
+     *-generic:2
+          description: System peripheral
+          product: Xeon E5/Core i7 DMA Channel 2 [8086:3C22]
+          vendor: Intel Corporation [8086]
+          physical id: 4.2
+          bus info: pci@0000:20:04.2
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: msix pciexpress pm bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: irq:10 memory:fbfd0000-fbfd3fff
+     *-generic:3
+          description: System peripheral
+          product: Xeon E5/Core i7 DMA Channel 3 [8086:3C23]
+          vendor: Intel Corporation [8086]
+          physical id: 4.3
+          bus info: pci@0000:20:04.3
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: msix pciexpress pm bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: irq:10 memory:fbfc0000-fbfc3fff
+     *-generic:4
+          description: System peripheral
+          product: Xeon E5/Core i7 DMA Channel 4 [8086:3C24]
+          vendor: Intel Corporation [8086]
+          physical id: 4.4
+          bus info: pci@0000:20:04.4
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: msix pciexpress pm bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: irq:5 memory:fbfb0000-fbfb3fff
+     *-generic:5
+          description: System peripheral
+          product: Xeon E5/Core i7 DMA Channel 5 [8086:3C25]
+          vendor: Intel Corporation [8086]
+          physical id: 4.5
+          bus info: pci@0000:20:04.5
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: msix pciexpress pm bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: irq:7 memory:fbfa0000-fbfa3fff
+     *-generic:6
+          description: System peripheral
+          product: Xeon E5/Core i7 DMA Channel 6 [8086:3C26]
+          vendor: Intel Corporation [8086]
+          physical id: 4.6
+          bus info: pci@0000:20:04.6
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: msix pciexpress pm bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: irq:10 memory:fbf90000-fbf93fff
+     *-generic:7
+          description: System peripheral
+          product: Xeon E5/Core i7 DMA Channel 7 [8086:3C27]
+          vendor: Intel Corporation [8086]
+          physical id: 4.7
+          bus info: pci@0000:20:04.7
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: msix pciexpress pm bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: irq:10 memory:fbf80000-fbf83fff
+     *-generic:8 UNCLAIMED
+          description: System peripheral
+          product: Xeon E5/Core i7 Address Map, VTd_Misc, System Management [8086:3C28]
+          vendor: Intel Corporation [8086]
+          physical id: 5
+          bus info: pci@0000:20:05.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pciexpress cap_list
+          configuration: latency=0
+     *-generic:9 UNCLAIMED
+          description: System peripheral
+          product: Xeon E5/Core i7 Control Status and Global Errors [8086:3C2A]
+          vendor: Intel Corporation [8086]
+          physical id: 5.2
+          bus info: pci@0000:20:05.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pciexpress cap_list
+          configuration: latency=0
+     *-generic:10 UNCLAIMED
+          description: PIC
+          product: Xeon E5/Core i7 I/O APIC [8086:3C2C]
+          vendor: Intel Corporation [8086]
+          physical id: 5.4
+          bus info: pci@0000:20:05.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pm io_x_-apic bus_master cap_list
+          configuration: latency=0
+          resources: memory:fbf70000-fbf70fff
+  *-power:0 UNCLAIMED
+       description: Power Supply 1
+       product: 503296-B21
+       vendor: HP
+       physical id: 1
+       serial: 5ANLE0CLL3D0J2
+       capacity: 460mWh
+  *-power:1 UNCLAIMED
+       description: Power Supply 2
+       vendor: HP
+       physical id: 2
+       capacity: 32768mWh
