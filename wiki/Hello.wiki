@@ -1,0 +1,12 @@
+#labels Featured,Phase-Design,Phase-QA,Phase-Deploy,Phase-Requirements
+= Introduction =
+
+All public resource here
+
+
+= Details =
+
+Include
+  * Resource download
+  * Configure files
+  * Reports
