@@ -308,7 +308,7 @@ hp_dl360p_gen8
                 capabilities: pm vpd msi msix pciexpress bus_master cap_list rom ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
                 configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 duplex=full firmware=5719-v1.29 NCSI v1.0.80.0 ip=10.20.216.130 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
                 resources: irq:32 memory:f6bf0000-f6bfffff(prefetchable) memory:f6be0000-f6beffff(prefetchable) memory:f6bd0000-f6bdffff(prefetchable) memory:f6b00000-f6b1ffff(prefetchable)
-           *-network:1 DISABLED
+           *-network:1
                 description: Ethernet interface
                 product: NetXtreme BCM5719 Gigabit Ethernet PCIe [14E4:1657]
                 vendor: Broadcom Corporation [14E4]
@@ -317,13 +317,14 @@ hp_dl360p_gen8
                 logical name: eth1
                 version: 01
                 serial: ac:16:2d:6f:c8:cd
+                size: 1Gbit/s
                 capacity: 1Gbit/s
                 width: 64 bits
                 clock: 33MHz
                 capabilities: pm vpd msi msix pciexpress bus_master cap_list rom ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
-                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 firmware=5719-v1.29 NCSI v1.0.80.0 latency=0 link=no multicast=yes port=twisted pair
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 duplex=full firmware=5719-v1.29 NCSI v1.0.80.0 ip=10.20.216.131 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
                 resources: irq:36 memory:f6bc0000-f6bcffff(prefetchable) memory:f6bb0000-f6bbffff(prefetchable) memory:f6ba0000-f6baffff(prefetchable) memory:f6b20000-f6b3ffff(prefetchable)
-           *-network:2 DISABLED
+           *-network:2
                 description: Ethernet interface
                 product: NetXtreme BCM5719 Gigabit Ethernet PCIe [14E4:1657]
                 vendor: Broadcom Corporation [14E4]
@@ -332,13 +333,14 @@ hp_dl360p_gen8
                 logical name: eth2
                 version: 01
                 serial: ac:16:2d:6f:c8:ce
+                size: 1Gbit/s
                 capacity: 1Gbit/s
                 width: 64 bits
                 clock: 33MHz
                 capabilities: pm vpd msi msix pciexpress bus_master cap_list rom ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
-                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 firmware=5719-v1.29 NCSI v1.0.80.0 latency=0 link=no multicast=yes port=twisted pair
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 duplex=full firmware=5719-v1.29 NCSI v1.0.80.0 ip=10.20.216.132 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
                 resources: irq:32 memory:f6b90000-f6b9ffff(prefetchable) memory:f6b80000-f6b8ffff(prefetchable) memory:f6b70000-f6b7ffff(prefetchable) memory:f4000000-f401ffff(prefetchable)
-           *-network:3 DISABLED
+           *-network:3
                 description: Ethernet interface
                 product: NetXtreme BCM5719 Gigabit Ethernet PCIe [14E4:1657]
                 vendor: Broadcom Corporation [14E4]
@@ -347,11 +349,12 @@ hp_dl360p_gen8
                 logical name: eth3
                 version: 01
                 serial: ac:16:2d:6f:c8:cf
+                size: 1Gbit/s
                 capacity: 1Gbit/s
                 width: 64 bits
                 clock: 33MHz
                 capabilities: pm vpd msi msix pciexpress bus_master cap_list rom ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
-                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 firmware=5719-v1.29 NCSI v1.0.80.0 latency=0 link=no multicast=yes port=twisted pair
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.122 duplex=full firmware=5719-v1.29 NCSI v1.0.80.0 ip=10.20.216.133 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
                 resources: irq:36 memory:f6b60000-f6b6ffff(prefetchable) memory:f6b50000-f6b5ffff(prefetchable) memory:f6b40000-f6b4ffff(prefetchable) memory:f4020000-f403ffff(prefetchable)
         *-pci:3
              description: PCI bridge
