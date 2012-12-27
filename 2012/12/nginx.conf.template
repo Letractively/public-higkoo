@@ -33,3 +33,77 @@ http {
 	 }
  }
 } 
+
+# nginx -V
+#nginx version: kws/1.2.5
+#built by gcc 4.4.6 20120305 (Red Hat 4.4.6-4) (GCC) 
+#TLS SNI support enabled
+#configure arguments: --prefix=/usr/share/nginx --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/data/log/nginx/error.log --http-log-path=/data/log/nginx/access.log --http-client-body-temp-path=/data/log/nginx/tmp/client_body --http-proxy-temp-path=/data/log/nginx/tmp/proxy --http-fastcgi-temp-path=/data/log/nginx/tmp/fastcgi --http-uwsgi-temp-path=/data/log/nginx/tmp/uwsgi --http-scgi-temp-path=/data/log/nginx/tmp/scgi --pid-path=/var/run/nginx.pid --lock-path=/var/lock/subsys/nginx --user=nobody --group=nobody --with-http_ssl_module --with-http_stub_status_module --with-cc-opt='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic' --with-ld-opt=-Wl,-E
+
+# tengine -V
+#Tengine version: Tengine/1.4.2 (nginx/1.2.5)
+#built by gcc 4.4.6 20120305 (Red Hat 4.4.6-4) (GCC) 
+#TLS SNI support enabled
+#configure arguments: --prefix=/usr/share/tengine --sbin-path=/usr/sbin/tengine --conf-path=/etc/tengine/tengine.conf --error-log-path=/data/log/tengine/error.log --http-log-path=/data/log/tengine/access.log --http-client-body-temp-path=/data/log/tengine/tmp/client_body --http-proxy-temp-path=/data/log/tengine/tmp/proxy --http-fastcgi-temp-path=/data/log/tengine/tmp/fastcgi --http-uwsgi-temp-path=/data/log/tengine/tmp/uwsgi --http-scgi-temp-path=/data/log/tengine/tmp/scgi --pid-path=/var/run/tengine.pid --lock-path=/var/lock/subsys/tengine --user=nobody --group=nobody --with-http_ssl_module --with-http_stub_status_module --without-dso --with-cc-opt='-O2 -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic' --with-ld-opt=-Wl,-E
+#loaded modules:
+#    ngx_core_module (static)
+#    ngx_errlog_module (static)
+#    ngx_conf_module (static)
+#    ngx_syslog_module (static)
+#    ngx_events_module (static)
+#    ngx_event_core_module (static)
+#    ngx_epoll_module (static)
+#    ngx_procs_module (static)
+#    ngx_proc_core_module (static)
+#    ngx_openssl_module (static)
+#    ngx_regex_module (static)
+#    ngx_http_module (static)
+#    ngx_http_core_module (static)
+#    ngx_http_log_module (static)
+#    ngx_http_upstream_module (static)
+#    ngx_http_static_module (static)
+#    ngx_http_autoindex_module (static)
+#    ngx_http_index_module (static)
+#    ngx_http_auth_basic_module (static)
+#    ngx_http_access_module (static)
+#    ngx_http_limit_conn_module (static)
+#    ngx_http_limit_req_module (static)
+#    ngx_http_geo_module (static)
+#    ngx_http_map_module (static)
+#    ngx_http_split_clients_module (static)
+#    ngx_http_referer_module (static)
+#    ngx_http_rewrite_module (static)
+#    ngx_http_ssl_module (static)
+#    ngx_http_proxy_module (static)
+#    ngx_http_fastcgi_module (static)
+#    ngx_http_uwsgi_module (static)
+#    ngx_http_scgi_module (static)
+#    ngx_http_memcached_module (static)
+#    ngx_http_empty_gif_module (static)
+#    ngx_http_browser_module (static)
+#    ngx_http_user_agent_module (static)
+#    ngx_http_upstream_ip_hash_module (static)
+#    ngx_http_upstream_check_module (static)
+#    ngx_http_upstream_least_conn_module (static)
+#    ngx_http_upstream_keepalive_module (static)
+#    ngx_http_stub_status_module (static)
+#    ngx_http_write_filter_module (static)
+#    ngx_http_header_filter_module (static)
+#    ngx_http_chunked_filter_module (static)
+#    ngx_http_range_header_filter_module (static)
+#    ngx_http_gzip_filter_module (static)
+#    ngx_http_postpone_filter_module (static)
+#    ngx_http_ssi_filter_module (static)
+#    ngx_http_charset_filter_module (static)
+#    ngx_http_userid_filter_module (static)
+#    ngx_http_footer_filter_module (static)
+#    ngx_http_headers_filter_module (static)
+#    ngx_http_copy_filter_module (static)
+#    ngx_http_range_body_filter_module (static)
+#    ngx_http_not_modified_filter_module (static)
+
+# openresty -V
+#nginx version: ngx_openresty/1.0.11.28
+#built by gcc 4.4.6 20120305 (Red Hat 4.4.6-4) (GCC) 
+#TLS SNI support enabled
+#configure arguments: --prefix=/usr/share/openresty/nginx --with-cc-opt='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic' --add-module=../ngx_devel_kit-0.2.17 --add-module=../echo-nginx-module-0.38rc2 --add-module=../xss-nginx-module-0.03rc9 --add-module=../ngx_coolkit-0.2rc1 --add-module=../set-misc-nginx-module-0.22rc5 --add-module=../form-input-nginx-module-0.07rc5 --add-module=../encrypted-session-nginx-module-0.02 --add-module=../ngx_lua-0.5.0rc21 --add-module=../headers-more-nginx-module-0.17rc1 --add-module=../srcache-nginx-module-0.13rc6 --add-module=../array-var-nginx-module-0.03rc1 --add-module=../memc-nginx-module-0.13rc3 --add-module=../redis2-nginx-module-0.08rc4 --add-module=../upstream-keepalive-nginx-module-0.7 --add-module=../auth-request-nginx-module-0.2 --add-module=../rds-json-nginx-module-0.12rc7 --add-module=../rds-csv-nginx-module-0.05rc1 --with-ld-opt='-Wl,-rpath,/usr/share/openresty/luajit/lib -Wl,-E' --sbin-path=/usr/sbin/openresty --conf-path=/etc/openresty/openresty.conf --error-log-path=/data/log/openresty/error.log --http-log-path=/data/log/openresty/access.log --http-client-body-temp-path=/data/log/openresty/tmp/client_body --http-proxy-temp-path=/data/log/openresty/tmp/proxy --http-fastcgi-temp-path=/data/log/openresty/tmp/fastcgi --http-uwsgi-temp-path=/data/log/openresty/tmp/uwsgi --http-scgi-temp-path=/data/log/openresty/tmp/scgi --pid-path=/var/run/openresty.pid --lock-path=/var/lock/subsys/openresty --user=nobody --group=nobody --with-http_ssl_module --with-http_stub_status_module
