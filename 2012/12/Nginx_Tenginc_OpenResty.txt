@@ -1,0 +1,19 @@
+# 用多进程监听独立IP的80端口
+~/runserver.sh 24 10.20.216.130 80 nginx
+~/runserver.sh 24 10.20.216.131 80 tengine
+~/runserver.sh 24 10.20.216.132 80 openresty
+
+# 用单进程监听独立IP的1080端口
+~/runserver.sh 1 10.20.216.130 1080 nginx
+~/runserver.sh 1 10.20.216.131 1080 tengine
+~/runserver.sh 1 10.20.216.132 1080 openresty
+
+# 用多进程监控各个IP的x080端口（手动修改配置文件）
+/usr/sbin/nginx -c /data/config/nginx_all_7080_24.conf
+/usr/sbin/tengine -c /data/config/tengine_all_8080_24.conf
+/usr/sbin/openresty -c /data/config/openresty_all_9080_24.conf
+
+# 用多进程监听所有IP的指定端口
+~/runserver.sh 24 0.0.0.0 7000 nginx
+~/runserver.sh 24 0.0.0.0 8000 tengine
+~/runserver.sh 24 0.0.0.0 9000 openresty
