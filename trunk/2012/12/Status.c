@@ -1,10 +1,18 @@
 Status(){// Run-Time Settings (F4) --> "Additional attribules"
- 	GetIP((int)lr_get_attrib_long("cIP"));
+    char * tname;
+
+    GetIP((int)lr_get_attrib_long("cIP"));
  	GetPORT((int)lr_get_attrib_long("cPort"));
+    tname = lr_eval_string("{IP}_{PORT}");
+
+	lr_start_transaction(tname);
 
 	web_url("status",
 		"URL=http://{IP}:{PORT}/status","Resource=0",
 		"RecContentType=text/html","Mode=HTTP",LAST );
+
+	lr_end_transaction(tname, LR_AUTO);
+
 }
 
 const static char ip[4][16] = {"10.20.216.130","10.20.216.131","10.20.216.132","10.20.216.133"};
@@ -32,7 +40,7 @@ char* GetIP(int t){
 	}
 }
 
-int GetPORT(int port){
+int GetPORT(int port){ // 24颗CPU启动了24个进程
 	switch (port) {
 	case 0:// 7001~7024
 		return lr_save_int(7001 + rand() % 24,"PORT");
