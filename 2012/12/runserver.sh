@@ -21,7 +21,7 @@ config=/tmp/${servername}_$2_$3_$1.conf
 sed "s/WORK_PROCESSES/$1/g" $template | \
 sed "s/LISTEN_ADDRESS/$2/g" | \
 sed "s/LISTEN_PORT/$3/g" | \
-sed "s/ERROR_LOG/$servername_$2_$3_$1_error.log/g" | \
+sed "s/ERROR_LOG/$servername/$2_$3_$1_error.log/g" | \
 sed "s/PID_NAME/$servername_$2_$3_$1.pid/g" > $config
 
 cmd="$webserver -c $config"
