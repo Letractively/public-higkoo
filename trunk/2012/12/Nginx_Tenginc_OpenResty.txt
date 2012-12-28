@@ -3,7 +3,7 @@ killall -v -9 nginx tengine openresty
 # 多进程 + 单IP + 单端口
 ~/runserver.sh 24 10.20.216.130 80 nginx						#1
 ~/runserver.sh 24 10.20.216.133 80 tengine						#2
-~/runserver.sh 24 10.20.221.162 80 openresty					#3
+~/runserver.sh 24 10.20.221.132 80 openresty					#3
 
 # 多进程 + 全IP + 单端口
 ~/runserver.sh 24 0.0.0.0 7000 nginx							#4
@@ -13,7 +13,7 @@ killall -v -9 nginx tengine openresty
 # 单进程 + 单IP + 单端口
 ~/runserver.sh 1 10.20.216.130 1080 nginx						#7
 ~/runserver.sh 1 10.20.216.133 1080 tengine						#8
-~/runserver.sh 1 10.20.221.162 1080 openresty					#9
+~/runserver.sh 1 10.20.216.132 1080 openresty					#9
 
 # 多进程 + 多IP + 单端口（手动修改配置文件）
 /usr/sbin/nginx -c /data/config/nginx_all_7080_24.conf			#10
@@ -28,7 +28,7 @@ do
 	~/runserver.sh 1 0.0.0.0 $((9000+$i)) openresty				#15
 done
 
-# CentOS 6.3 Linux HP_DL360p_Gen8 2.6.32-279.19.1.el6.x86_64 ，网卡驱动默认（4队列），使用系统默认路由（同网段IP都会走eth0）
+# 第1轮： CentOS 6.3 Linux HP_DL360p_Gen8 2.6.32-279.19.1.el6.x86_64 ，网卡驱动默认（4队列），使用系统默认路由（同网段IP都会走eth0）
 #1	vuser=200	MaxQps=57,000	rpt=30ms
 #2	vuser=200	MaxQps=32,000	rpt=60ms
 #3	vuser=200	MaxQps=57,000	rpt=30ms
@@ -45,3 +45,12 @@ done
 #14	vuser=300	MaxQps=43,000	rpt=150ms	（CPU上几乎没有网卡中断占用%si，只有最后一颗CPU核被占用且被耗尽，响应时间有明显抖动）
 #15	vuser=300	MaxQps=99,000	rpt=50ms	（每个cpu核都有占用，第1颗cpu上有4个核占用较多但无%si，第2颗cpu上有4颗cpu核有中断占用且基本被耗尽。在加压过程中有少量连接超时出现，网卡有少量丢包）
 
+# 第2轮： 关闭Tengine的CPU亲缘性（worker_cpu_affinity off），重新测试Tengine（理论上它的lingering_close和accept_mutex选项应该会提升性能）
+#2	vuser=200	MaxQps=58,000	rpt=35ms
+#5	vuser=200	MaxQps=58,000	rpt=35ms
+#8	vuser=200	MaxQps=29,000	rpt=50ms
+#11	vuser=200	MaxQps=81,000	rpt=25ms
+#14	vuser=300	MaxQps=99,000	rpt=40ms
+#A	vuser=200	MaxQps=79,000	rpt=30ms	（额外场景A：因为网卡只有4队列，那就仅随机访问场景#14中的4个端口。响应时间明显抖动）
+#B	vuser=200	MaxQps=94,000	rpt=25ms	（额外场景B：场景A中进程数为1，将它调整为24。性能仍有上升，说明多进程对性能提升仍有帮助。从现象上看是由于其子进程也能利用其它CPU核）
+#C	vuser=200	MaxQps=96,000	rpt=25ms	（额外场景C：相对场景#14，虚拟用户数减少。在加压过程中仍有少量连接超时的现象，响应时间有明显波动）
