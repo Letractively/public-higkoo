@@ -8,14 +8,15 @@ Status(){// Run-Time Settings (F4) --> "Additional attribules"
 	lr_start_transaction(tname);
 
 	web_url("status",
-		"URL=http://{IP}:{PORT}/status","Resource=0",
-		"RecContentType=text/html","Mode=HTTP",LAST );
+		"URL=http://{IP}:{PORT}/status",
+//		"URL=http://10.20.216.134:8000/status",
+		"Resource=0","RecContentType=text/html","Mode=HTTP",LAST );
 
 	lr_end_transaction(tname, LR_AUTO);
 
 }
 
-const static char ip[4][16] = {"10.20.216.130","10.20.216.131","10.20.216.132","10.20.216.133"};
+const static char ip[4][16] = {"10.20.216.130","10.20.216.133","10.20.216.132","10.20.216.134"};
 
 char* GetIP(int t){ 
 	switch (t) {
