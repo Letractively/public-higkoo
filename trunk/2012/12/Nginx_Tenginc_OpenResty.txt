@@ -2,8 +2,8 @@ killall -v -9 nginx tengine openresty
 
 # 多进程 + 单IP + 单端口
 ~/runserver.sh 24 10.20.216.130 80 nginx						#1
-~/runserver.sh 24 10.20.216.134 80 tengine						#2
-~/runserver.sh 24 10.20.216.132 80 openresty					#3
+~/runserver.sh 24 10.20.216.133 80 tengine						#2
+~/runserver.sh 24 10.20.221.162 80 openresty					#3
 
 # 多进程 + 全IP + 单端口
 ~/runserver.sh 24 0.0.0.0 7000 nginx							#4
@@ -12,8 +12,8 @@ killall -v -9 nginx tengine openresty
 
 # 单进程 + 单IP + 单端口
 ~/runserver.sh 1 10.20.216.130 1080 nginx						#7
-~/runserver.sh 1 10.20.216.134 1080 tengine						#8
-~/runserver.sh 1 10.20.216.132 1080 openresty					#9
+~/runserver.sh 1 10.20.216.133 1080 tengine						#8
+~/runserver.sh 1 10.20.221.162 1080 openresty					#9
 
 # 多进程 + 多IP + 单端口（手动修改配置文件）
 /usr/sbin/nginx -c /data/config/nginx_all_7080_24.conf			#10
@@ -28,6 +28,20 @@ do
 	~/runserver.sh 1 0.0.0.0 $((9000+$i)) openresty				#15
 done
 
-#1 vuser=200 MaxQps=57000 rpt=30ms
-#2 vuser=200 MaxQps=32000 rpt=60ms
-#3 vuser=200 MaxQps=57000 rpt=30ms
+# CentOS 6.3 Linux HP_DL360p_Gen8 2.6.32-279.19.1.el6.x86_64 ，网卡驱动默认（4队列），使用系统默认路由（同网段IP都会走eth0）
+#1	vuser=200	MaxQps=57,000	rpt=30ms
+#2	vuser=200	MaxQps=32,000	rpt=60ms
+#3	vuser=200	MaxQps=57,000	rpt=30ms
+#4	vuser=200	MaxQps=58,000	rpt=30ms
+#5	vuser=200	MaxQps=32,000	rpt=60ms
+#6	vuser=200	MaxQps=55,000	rpt=30ms
+#7	vuser=200	MaxQps=30,000	rpt=70ms
+#8	vuser=200	MaxQps=42,000	rpt=50ms	（CPU上几乎没有网卡中断占用%si，只有最后一颗CPU核被占用且被耗尽）
+#9	vuser=200	MaxQps=29,000	rpt=70ms
+#10	vuser=200	MaxQps=78,000	rpt=30ms	（中断占用对应的CPU核几乎耗尽）
+#11	vuser=200	MaxQps=59,000	rpt=45ms	（中断占用对应的CPU核几乎耗尽）
+#12	vuser=200	MaxQps=77,000	rpt=30ms	（中断占用对应的CPU核几乎耗尽）
+#13	vuser=300	MaxQps=99,000	rpt=45ms	（200个用户不够压力，每个cpu核都有占用，第1颗cpu上有4个核占用较多但无%si，第2颗cpu上有4颗cpu核有中断占用且基本被耗尽。在加压过程中有少量连接超时出现，网卡有少量丢包）
+#14	vuser=300	MaxQps=43,000	rpt=150ms	（CPU上几乎没有网卡中断占用%si，只有最后一颗CPU核被占用且被耗尽，响应时间有明显抖动）
+#15	vuser=300	MaxQps=99,000	rpt=50ms	（每个cpu核都有占用，第1颗cpu上有4个核占用较多但无%si，第2颗cpu上有4颗cpu核有中断占用且基本被耗尽。在加压过程中有少量连接超时出现，网卡有少量丢包）
+
