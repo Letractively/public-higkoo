@@ -23,6 +23,7 @@ sed "s/LISTEN_ADDRESS/$2/g" | \
 sed "s/LISTEN_PORT/$3/g" | \
 sed "s#ERROR_LOG#$servername/$2_$3_$1_error.log#g" | \
 sed "s/PID_NAME/$servername_$2_$3_$1.pid/g" > $config
+[[ "x$servername" = "xtengine" ]] && sed -i 's/#worker_cpu_affinity/worker_cpu_affinity/g' $config
 
 cmd="$webserver -c $config"
 if [[ "x$5" = "x" ]] ||  [[ "x$5" = "xstart" ]] ; then

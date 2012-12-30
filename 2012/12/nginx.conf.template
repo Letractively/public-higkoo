@@ -1,6 +1,7 @@
 # /etc/nginx/nginx.conf.template
 user  nobody nobody; # 出于安全，无特别要求禁止使用root
 worker_processes  WORK_PROCESSES; # 推荐配置为CPU核数
+#worker_cpu_affinity off; # Tengine独有的off选项，默认是开启自动绑定亲缘性
 error_log  /data/log/ERROR_LOG error;
 pid        /var/run/PID_NAME; # 此路径不建议更改
 
