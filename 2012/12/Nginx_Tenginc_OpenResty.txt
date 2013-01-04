@@ -29,31 +29,31 @@ do
 done
 
 # 第2轮： 关闭Tengine的CPU亲缘性（worker_cpu_affinity off），重新测试Tengine（理论上它的lingering_close和accept_mutex选项应该会提升性能）
-#2	vuser=200	MaxQps=58,000	rpt=35ms
-#5	vuser=200	MaxQps=58,000	rpt=35ms
-#8	vuser=200	MaxQps=29,000	rpt=50ms
-#11	vuser=200	MaxQps=81,000	rpt=25ms
-#14	vuser=300	MaxQps=99,000	rpt=40ms
-#A	vuser=200	MaxQps=79,000	rpt=30ms	（额外场景A：因为网卡只有4队列，那就仅随机访问场景#14中的4个端口。响应时间明显抖动）
-#B	vuser=200	MaxQps=94,000	rpt=25ms	（额外场景B：场景A中进程数为1，将它调整为24。性能仍有上升，说明多进程对性能提升仍有帮助。从现象上看是由于其子进程也能利用其它CPU核）
-#C	vuser=200	MaxQps=96,000	rpt=25ms	（额外场景C：相对场景#14，虚拟用户数减少。在加压过程中仍有少量连接超时的现象，响应时间有明显波动）
-#D	vuser=300	MaxQps=100,000	rpt=50ms	（额外场景D：相对场景#14，受第1轮#8测试结果的启示，将各个Tengine绑定到独立的CPU上。本次测试又增加了2台测试机，QPS略有提高应正常。说明绑定和不绑定对性能并没有质的提升）
-#E	vuser=300	MaxQps=100,000	rpt=40ms	（额外场景E：针对场景D中出现网卡所有CPU的%si占用仍然高的问题，设定Tengine的绑定CPU不与网卡共用。发现网上所在CPU仍然存在%si占用，虽占比不高但吞吐量不再增加。CPU上未现瓶颈）
+#2	vuser=200	MaxQps=58,000	rpt=3.5ms
+#5	vuser=200	MaxQps=58,000	rpt=3.5ms
+#8	vuser=200	MaxQps=29,000	rpt=5.0ms
+#11	vuser=200	MaxQps=81,000	rpt=2.5ms
+#14	vuser=300	MaxQps=99,000	rpt=4.0ms
+#A	vuser=200	MaxQps=79,000	rpt=3.0ms	（额外场景A：因为网卡只有4队列，那就仅随机访问场景#14中的4个端口。响应时间明显抖动）
+#B	vuser=200	MaxQps=94,000	rpt=2.5ms	（额外场景B：场景A中进程数为1，将它调整为24。性能仍有上升，说明多进程对性能提升仍有帮助。从现象上看是由于其子进程也能利用其它CPU核）
+#C	vuser=200	MaxQps=96,000	rpt=2.5ms	（额外场景C：相对场景#14，虚拟用户数减少。在加压过程中仍有少量连接超时的现象，响应时间有明显波动）
+#D	vuser=300	MaxQps=100,000	rpt=5.0ms	（额外场景D：相对场景#14，受第1轮#8测试结果的启示，将各个Tengine绑定到独立的CPU上。本次测试又增加了2台测试机，QPS略有提高应正常。说明绑定和不绑定对性能并没有质的提升）
+#E	vuser=300	MaxQps=100,000	rpt=4.0ms	（额外场景E：针对场景D中出现网卡所有CPU的%si占用仍然高的问题，设定Tengine的绑定CPU不与网卡共用。发现网上所在CPU仍然存在%si占用，虽占比不高但吞吐量不再增加。CPU上未现瓶颈）
 
 # 第1轮： CentOS 6.3 Linux HP_DL360p_Gen8 2.6.32-279.19.1.el6.x86_64 ，网卡驱动默认（4队列），使用系统默认路由（同网段IP都会走eth0）
-#1	vuser=200	MaxQps=57,000	rpt=30ms
-#2	vuser=200	MaxQps=32,000	rpt=60ms
-#3	vuser=200	MaxQps=57,000	rpt=30ms
-#4	vuser=200	MaxQps=58,000	rpt=30ms
-#5	vuser=200	MaxQps=32,000	rpt=60ms
-#6	vuser=200	MaxQps=55,000	rpt=30ms
-#7	vuser=200	MaxQps=30,000	rpt=70ms
-#8	vuser=200	MaxQps=42,000	rpt=50ms	（CPU上几乎没有网卡中断占用%si，只有最后一颗CPU核被占用且被耗尽）
-#9	vuser=200	MaxQps=29,000	rpt=70ms
-#10	vuser=200	MaxQps=78,000	rpt=30ms	（中断占用对应的CPU核几乎耗尽）
-#11	vuser=200	MaxQps=59,000	rpt=45ms	（中断占用对应的CPU核几乎耗尽）
-#12	vuser=200	MaxQps=77,000	rpt=30ms	（中断占用对应的CPU核几乎耗尽）
-#13	vuser=300	MaxQps=99,000	rpt=45ms	（200个用户不够压力，每个cpu核都有占用，第1颗cpu上有4个核占用较多但无%si，第2颗cpu上有4颗cpu核有中断占用且基本被耗尽。在加压过程中有少量连接超时出现，网卡有少量丢包）
-#14	vuser=300	MaxQps=43,000	rpt=150ms	（CPU上几乎没有网卡中断占用%si，只有最后一颗CPU核被占用且被耗尽，响应时间有明显抖动）
-#15	vuser=300	MaxQps=99,000	rpt=50ms	（每个cpu核都有占用，第1颗cpu上有4个核占用较多但无%si，第2颗cpu上有4颗cpu核有中断占用且基本被耗尽。在加压过程中有少量连接超时出现，网卡有少量丢包）
+#1	vuser=200	MaxQps=57,000	rpt=3.0ms
+#2	vuser=200	MaxQps=32,000	rpt=6.0ms
+#3	vuser=200	MaxQps=57,000	rpt=3.0ms
+#4	vuser=200	MaxQps=58,000	rpt=3.0ms
+#5	vuser=200	MaxQps=32,000	rpt=6.0ms
+#6	vuser=200	MaxQps=55,000	rpt=3.0ms
+#7	vuser=200	MaxQps=30,000	rpt=7.0ms
+#8	vuser=200	MaxQps=42,000	rpt=5.0ms	（CPU上几乎没有网卡中断占用%si，只有最后一颗CPU核被占用且被耗尽）
+#9	vuser=200	MaxQps=29,000	rpt=7.0ms
+#10	vuser=200	MaxQps=78,000	rpt=3.0ms	（中断占用对应的CPU核几乎耗尽）
+#11	vuser=200	MaxQps=59,000	rpt=4.5ms	（中断占用对应的CPU核几乎耗尽）
+#12	vuser=200	MaxQps=77,000	rpt=3.0ms	（中断占用对应的CPU核几乎耗尽）
+#13	vuser=300	MaxQps=99,000	rpt=4.5ms	（200个用户不够压力，每个cpu核都有占用，第1颗cpu上有4个核占用较多但无%si，第2颗cpu上有4颗cpu核有中断占用且基本被耗尽。在加压过程中有少量连接超时出现，网卡有少量丢包）
+#14	vuser=300	MaxQps=43,000	rpt=15ms	（CPU上几乎没有网卡中断占用%si，只有最后一颗CPU核被占用且被耗尽，响应时间有明显抖动）
+#15	vuser=300	MaxQps=99,000	rpt=5.0ms	（每个cpu核都有占用，第1颗cpu上有4个核占用较多但无%si，第2颗cpu上有4颗cpu核有中断占用且基本被耗尽。在加压过程中有少量连接超时出现，网卡有少量丢包）
 
