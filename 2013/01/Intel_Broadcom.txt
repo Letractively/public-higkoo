@@ -1,0 +1,13 @@
+A：	HP-DL360p-Gen8 + BCM5719
+B：	Dell-R720xd + BCM5719
+C：	Dell-R720xd + I350
+
+第1轮： CentOS 6.3 Linux Dell-R720xd 2.6.32-279.19.1.el6.x86_64，网卡驱动默认（4队列）
+	测试#1
+#A	vuser=300	MaxQps=59,000	rpt=5ms		（默认4队列）
+#B	vuser=300	MaxQps=26,000	rpt=12ms	（默认4队列）
+#C	vuser=300	MaxQps=26,000	rpt=12ms	（默认8队列）
+		测试#13
+#A	vuser=300	MaxQps=100,000	rpt=3ms
+#B	vuser=300	MaxQps=57,000	rpt=6ms		（峰值出现在95,000不久后跌到57,000持续）
+#C	vuser=300	MaxQps=96,000	rpt=3.5ms	（峰值出现在120,000不久后跌到96,000持续）
