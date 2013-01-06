@@ -7,7 +7,17 @@ C：	Dell-R720xd + I350
 #A	vuser=300	MaxQps=59,000	rpt=5ms		（默认4队列）
 #B	vuser=300	MaxQps=26,000	rpt=12ms	（默认4队列）
 #C	vuser=300	MaxQps=26,000	rpt=12ms	（默认8队列）
-		测试#13
+	测试#13
 #A	vuser=300	MaxQps=100,000	rpt=3ms
 #B	vuser=300	MaxQps=57,000	rpt=6ms		（峰值出现在95,000不久后跌到57,000持续）
 #C	vuser=300	MaxQps=96,000	rpt=3.5ms	（峰值出现在120,000不久后跌到96,000持续）
+
+第2轮：升级网卡驱动 igb=3.4.9 tg3=3.124c
+	测试#1
+#B	vuser=300	MaxQps=25,000	rpt=13ms	（默认4队列）
+#C	vuser=300	MaxQps=77,000	rpt=4.5ms	（默认1队列）
+#C	vuser=300	MaxQps=24,000	rpt=13ms	（设定为8队列）
+	测试#13
+#B	vuser=300	MaxQps=58,000	rpt=6ms		（峰值出现在100,000不久后跌到57,000持续）
+#C	vuser=300	MaxQps=42,000	rpt=7.5ms	（默认1队列。峰值出现在100,000不久后跌到96,000持续）
+#C	vuser=300	MaxQps=61,000	rpt=5.5ms	（设定为8队列。峰值出现在100,000不久后跌到96,000持续）
