@@ -1,0 +1,28 @@
+--- SPECS/kernel.spec	2012-11-25 03:28:39.000000000 +0800
++++ /tmp/kernel.spec	2013-01-09 19:21:48.262485201 +0800
+@@ -19,7 +19,7 @@ Summary: The Linux kernel
+ 
+ %define rhel 1
+ %if %{rhel}
+-%define distro_build 279.19.1
++%define distro_build 279.19.2
+ %define signmodules 1
+ %else
+ # fedora_build defines which build revision of this kernel version we're
+@@ -609,6 +609,7 @@ Source85: config-ia64-generic-rhel
+ Source86: config-x86_64-debug-rhel
+ 
+ # empty final patch file to facilitate testing of kernel patches
++Patch1: ip_vs_conn_locking_granularity.patch
+ Patch999999: linux-kernel-test.patch
+ 
+ BuildRoot: %{_tmppath}/kernel-%{KVERREL}-root
+@@ -920,7 +921,7 @@ cp %{SOURCE15} %{SOURCE1} %{SOURCE16} %{
+ make -f %{SOURCE20} VERSION=%{version} configs
+ 
+ ApplyOptionalPatch linux-kernel-test.patch
+-
++ApplyOptionalPatch ip_vs_conn_locking_granularity.patch
+ # Any further pre-build tree manipulations happen here.
+ 
+ chmod +x scripts/checkpatch.pl
