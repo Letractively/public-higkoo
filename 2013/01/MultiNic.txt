@@ -1,0 +1,94 @@
+route -n
+# Kernel IP routing table
+# Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 eth0
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 eth1
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 eth2
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 eth3
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 p4p1
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 p4p2
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 p4p3
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 p4p4
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1002   0        0 eth0
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1003   0        0 eth1
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1004   0        0 eth2
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1005   0        0 eth3
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1006   0        0 p4p1
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1007   0        0 p4p2
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1008   0        0 p4p3
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1009   0        0 p4p4
+# 0.0.0.0         10.20.216.1     0.0.0.0         UG    0      0        0 eth0
+
+ip route list
+# 10.20.216.0/23 dev eth0  proto kernel  scope link  src 10.20.216.140 
+# 10.20.216.0/23 dev eth1  proto kernel  scope link  src 10.20.216.141 
+# 10.20.216.0/23 dev eth2  proto kernel  scope link  src 10.20.216.142 
+# 10.20.216.0/23 dev eth3  proto kernel  scope link  src 10.20.216.143 
+# 10.20.216.0/23 dev p4p1  proto kernel  scope link  src 10.20.216.144 
+# 10.20.216.0/23 dev p4p2  proto kernel  scope link  src 10.20.216.145 
+# 10.20.216.0/23 dev p4p3  proto kernel  scope link  src 10.20.216.146 
+# 10.20.216.0/23 dev p4p4  proto kernel  scope link  src 10.20.216.147 
+# 169.254.0.0/16 dev eth0  scope link  metric 1002 
+# 169.254.0.0/16 dev eth1  scope link  metric 1003 
+# 169.254.0.0/16 dev eth2  scope link  metric 1004 
+# 169.254.0.0/16 dev eth3  scope link  metric 1005 
+# 169.254.0.0/16 dev p4p1  scope link  metric 1006 
+# 169.254.0.0/16 dev p4p2  scope link  metric 1007 
+# 169.254.0.0/16 dev p4p3  scope link  metric 1008 
+# 169.254.0.0/16 dev p4p4  scope link  metric 1009 
+# default via 10.20.216.1 dev eth0 
+
+ip rule list
+# 0:	from all lookup local 
+# 32766:	from all lookup main 
+# 32767:	from all lookup default 
+
+echo 140 eth0 >> /etc/iproute2/rt_tables
+echo 141 eth1 >> /etc/iproute2/rt_tables
+echo 142 eth2 >> /etc/iproute2/rt_tables
+echo 143 eth3 >> /etc/iproute2/rt_tables
+echo 144 p4p1 >> /etc/iproute2/rt_tables
+echo 145 p4p2 >> /etc/iproute2/rt_tables
+echo 146 p4p3 >> /etc/iproute2/rt_tables
+echo 147 p4p4 >> /etc/iproute2/rt_tables
+
+ip route add to 0.0.0.0/0 via 10.20.216.1 dev eth0 table eth0
+ip route add to 0.0.0.0/0 via 10.20.216.1 dev eth1 table eth1
+ip route add to 0.0.0.0/0 via 10.20.216.1 dev eth2 table eth2
+ip route add to 0.0.0.0/0 via 10.20.216.1 dev eth3 table eth3
+ip route add to 0.0.0.0/0 via 10.20.216.1 dev p4p1 table p4p1
+ip route add to 0.0.0.0/0 via 10.20.216.1 dev p4p2 table p4p2
+ip route add to 0.0.0.0/0 via 10.20.216.1 dev p4p3 table p4p3
+ip route add to 0.0.0.0/0 via 10.20.216.1 dev p4p4 table p4p4
+
+ip rule add from 10.20.216.140/32 table eth0
+ip rule add from 10.20.216.141/32  table eth1
+ip rule add from 10.20.216.142/32  table eth2
+ip rule add from 10.20.216.143/32  table eth3
+ip rule add from 10.20.216.144/32  table p4p1
+ip rule add from 10.20.216.145/32  table p4p2
+ip rule add from 10.20.216.146/32  table p4p3
+ip rule add from 10.20.216.147/32  table p4p4
+
+route del -net 0.0.0.0 netmask 0.0.0.0 gw 10.20.216.1 dev eth0
+
+route -n
+# Kernel IP routing table
+# Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 eth0
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 eth1
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 eth2
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 eth3
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 p4p1
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 p4p2
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 p4p3
+# 10.20.216.0     0.0.0.0         255.255.254.0   U     0      0        0 p4p4
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1002   0        0 eth0
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1003   0        0 eth1
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1004   0        0 eth2
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1005   0        0 eth3
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1006   0        0 p4p1
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1007   0        0 p4p2
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1008   0        0 p4p3
+# 169.254.0.0     0.0.0.0         255.255.0.0     U     1009   0        0 p4p4
+

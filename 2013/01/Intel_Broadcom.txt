@@ -18,6 +18,6 @@ C：	Dell-R720xd + I350
 #C	vuser=300	MaxQps=77,000	rpt=4.5ms	（默认1队列）
 #C	vuser=300	MaxQps=24,000	rpt=13ms	（设定为8队列）
 	测试#13
-#B	vuser=300	MaxQps=58,000	rpt=6ms		（峰值出现在100,000不久后跌到57,000持续）
-#C	vuser=300	MaxQps=42,000	rpt=7.5ms	（默认1队列。峰值出现在100,000不久后跌到96,000持续）
-#C	vuser=300	MaxQps=61,000	rpt=5.5ms	（设定为8队列。峰值出现在100,000不久后跌到96,000持续）
+#B	vuser=300	MaxQps=58,000	rpt=6ms		（峰值出现在100,000不久后跌到58,000持续）
+#C	vuser=300	MaxQps=42,000	rpt=7.5ms	（默认1队列）
+#C	vuser=300	MaxQps=61,000	rpt=5.5ms	（设定为8队列。峰值出现在100,000不久后跌到61,000持续）
